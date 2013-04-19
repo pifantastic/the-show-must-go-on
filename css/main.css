@@ -1,50 +1,4 @@
 
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
-
-body {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-img {
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
@@ -77,94 +31,66 @@ img.bg {
 
 .page-wrapper {
   position: relative;
-}
-
-.title {
-  color: #FFF;
-}
-
-nav {
-  width: 640px;
-  height: 50px;
-  margin: 100px auto;
-}
-
-nav a {
-  display: block;
-  float: left;
-  color: #FFF;
-  margin: .5em;
-  padding: 0;
-  font-family: "pointy_demoregular";
-  font-size: 28px;
-  line-height: 28px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-article {
-  margin: 15px;
-  color: #FFF;
-}
-
-article h1 {
-  color: #FFF;
-}
-
-footer h3 {
-  color: #FFF;
-  text-align: center;
-  font-family: "pointy_demoregular";
-}
-
-article {
-  display: none;
-}
-
-article.active {
-  display: block;
-}
-
-.main {
-  width: 560px;
-  margin: 125px auto;
-}
-
-#home h1,
-#home h2 {
-  font-family: "pointy_demoregular";
-  color: #FFF;
-  font-weight: normal;
-}
-
-#home h1 {
-  font-size: 102px;
-  text-align: center;
-  line-height: 86px;
-  margin-bottom: 40px;
-}
-
-#home h2 {
-  font-size: 40px;
-  text-align: center;
-}
-
-#trailer {
-  width: 560px;
+  width: 600px;
   margin: 0 auto;
 }
 
+div.content {
+  background-color: #FFF;
+  color: #000;
+  padding: 15px;
+  display: none;
+  font-family: georgia, times, serif;
+  font-size: 19px;
+  line-height: 29.75px;
+  border-radius: 2px;
+}
 
-@font-face {
-  font-family: 'pointy_demoregular';
-  src: url('../fonts/pointy_demo-webfont.eot');
-  src: url('../fonts/pointy_demo-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/pointy_demo-webfont.woff') format('woff'),
-       url('../fonts/pointy_demo-webfont.ttf') format('truetype'),
-       url('../fonts/pointy_demo-webfont.svg#pointy_demoregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+div.content.active {
+  display: block;
+}
+
+nav {
+  height: 29px;
+  margin: 100px 0 100px 0;
+}
+
+  nav ul {
+    padding: 0;
+  }
+
+    nav li {
+      display: block;
+      float: left;
+      width: 120px;
+      text-align: center;
+    }
+
+      nav a {
+        font-family: 'Londrina Shadow', cursive;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 24px;
+      }
+
+@media screen and (max-width: 600px) {
+  .page-wrapper {
+    width: 100%;
+  }
+
+  nav {
+    margin: 0;
+    height: auto;
+  }
+
+  nav li {
+    float: none;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  div.content {
+    display: block;
+    margin-bottom: 25px;
+  }
 }
