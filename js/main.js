@@ -16,6 +16,17 @@ function hideTrailer () {
   $('#trailer').html('');
 }
 
+function showKickstarter () {
+  var sm = '<iframe width="411" height="309" src="http://www.kickstarter.com/projects/1810006957/the-show-must-go-on-6/widget/video.html" frameborder="0"></iframe>';
+  var lg = '<iframe width="570" height="428" src="http://www.kickstarter.com/projects/1810006957/the-show-must-go-on-6/widget/video.html" frameborder="0"></iframe>';
+  var link = '<h4><a href="http://www.kickstarter.com/projects/1810006957/the-show-must-go-on-6">Click to donate</a></h4>';
+  $('#donate').html((small() ? sm : lg) + link);
+}
+
+function hideKickstarter () {
+  $('#donate').html('');
+}
+
 $(function () {
 
   // Handle navigation on large screens.
@@ -38,11 +49,19 @@ $(function () {
     else {
       hideTrailer();
     }
+
+    if ($(this).data('target') === 'donate') {
+      showKickstarter();
+    }
+    else {
+      hideKickstarter();
+    }
   });
 
   $(window).resize(_.throttle(function () {
     if (small()) {
       showTrailer();
+      showKickstarter();
     }
     else {
       hideTrailer();
@@ -52,6 +71,7 @@ $(function () {
   // Show the trailer initially for small screens.
   if (small()) {
     showTrailer();
+    showKickstarter();
   }
 
 });

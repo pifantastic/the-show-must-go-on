@@ -50,9 +50,17 @@ div.content.active {
   display: block;
 }
 
+  div.content h3 {
+    margin-top: 5px;
+  }
+
+div#donate h4 {
+  text-align: center;
+}
+
 nav {
   height: 29px;
-  margin: 100px 0 100px 0;
+  margin: 95px 0 100px 0;
 }
 
   nav ul {
@@ -62,14 +70,17 @@ nav {
     nav li {
       display: block;
       float: left;
-      width: 120px;
+      width: 100px;
       text-align: center;
+      margin: 0 10px;
+      background-color: #FFF;
+      border-radius: 3px;
+      padding: 5px 0;
     }
 
       nav a {
-        font-family: 'Londrina Shadow', cursive;
         text-decoration: none;
-        color: #FFF;
+        color: #000;
         font-size: 24px;
       }
 
@@ -87,6 +98,7 @@ nav {
     float: none;
     width: 100%;
     padding: 5px 0;
+    margin: 5px 0;
   }
 
   div.content {
