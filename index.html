@@ -28,11 +28,11 @@
     <div class="page-wrapper">
       <nav>
         <ul>
-          <li><a data-target="home" href="#home">Home</a></li>
-          <li><a data-target="trailer" href="#trailer">Trailer</a></li>
-          <li><a data-target="about" href="#about">About</a></li>
-          <li><a data-target="contact" href="#contact">Contact</a></li>
-          <li><a data-target="donate" href="#donate">Donate</a></li>
+          <li><a class="nav-home" data-target="home" href="#home">Home</a></li>
+          <li><a class="nav-trailer" data-target="trailer" href="#trailer">Trailer</a></li>
+          <li><a class="nav-about" data-target="about" href="#about">About</a></li>
+          <li><a class="nav-contact" data-target="contact" href="#contact">Contact</a></li>
+          <li><a class="nav-donate" data-target="donate" href="#donate">Donate</a></li>
         </ul>
       </nav>
 
@@ -47,24 +47,26 @@
         </div>
 
         <div class="content" id="contact">
-          <div id="wufoo-z7x3p3">
-            Fill out my <a href="http://pifantastic.wufoo.com/forms/z7x3p3">online form</a>.
+          <div id="wufoo-z1oqkp0r14n4m5p">
+            Fill out my <a href="https://pifantastic.wufoo.com/forms/z1oqkp0r14n4m5p">online form</a>.
           </div>
           <script type="text/javascript">
-            var z7x3p3;
+            var z1oqkp0r14n4m5p;
             (function(d, t) {
               var s = d.createElement(t), options = {
                 'userName':'pifantastic',
-                'formHash':'z7x3p3',
+                'formHash':'z1oqkp0r14n4m5p',
                 'autoResize':true,
-                'height':'497',
+                'height':'557',
                 'async':true,
-                'header':'show'
+                'host':'wufoo.com',
+                'header':'show',
+                'ssl':true
               };
               s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
               s.onload = s.onreadystatechange = function() {
               var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-              try { z7x3p3 = new WufooForm();z7x3p3.initialize(options);z7x3p3.display(); } catch (e) {}};
+              try { z1oqkp0r14n4m5p = new WufooForm();z1oqkp0r14n4m5p.initialize(options);z1oqkp0r14n4m5p.display(); } catch (e) {}};
               var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
             })(document, 'script');
           </script>

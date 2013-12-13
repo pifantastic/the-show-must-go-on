@@ -70,19 +70,32 @@ nav {
     nav li {
       display: block;
       float: left;
-      width: 100px;
       text-align: center;
       margin: 0 10px;
-      background-color: #FFF;
+      background-color: transparent;
       border-radius: 3px;
-      padding: 5px 0;
+      cursor: pointer;
     }
 
       nav a {
+        width: 100px;
+        height: 38px;
+        text-indent: -9999px;
+        direction: ltr;
         text-decoration: none;
-        color: #000;
-        font-size: 24px;
+        display: block;
       }
+
+    .nav-home { background-image: url(/img/home.png); }
+    .nav-home:hover { background-image: url(/img/home-hover.png); }
+    .nav-trailer { background-image: url(/img/trailer.png); }
+    .nav-trailer:hover { background-image: url(/img/trailer-hover.png); }
+    .nav-contact { background-image: url(/img/contact.png); }
+    .nav-contact:hover { background-image: url(/img/contact-hover.png); }
+    .nav-donate { background-image: url(/img/donate.png); }
+    .nav-donate:hover { background-image: url(/img/donate-hover.png); }
+    .nav-about { background-image: url(/img/about.png); }
+    .nav-about:hover { background-image: url(/img/about-hover.png); }
 
 @media screen and (max-width: 600px) {
   .page-wrapper {
@@ -105,4 +118,9 @@ nav {
     display: block;
     margin-bottom: 25px;
   }
+}
+
+/* Needed for Firefox */
+.wufoo-form-container {
+  height: 447px;
 }
