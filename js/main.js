@@ -8,12 +8,12 @@ function small () {
 function showTrailer () {
   var sm = '<iframe width="411" height="231" src="http://www.youtube.com/embed/vsujbgfQxUU?rel=0" frameborder="0" allowfullscreen></iframe>';
   var lg = '<iframe width="570" height="321" src="http://www.youtube.com/embed/vsujbgfQxUU?rel=0" frameborder="0" allowfullscreen></iframe>';
-  $('#trailer').html(small() ? sm : lg);
+  $('#trailer-wrapper').html(small() ? sm : lg);
 }
 
 // Hide the YouTube trailer.
 function hideTrailer () {
-  $('#trailer').html('');
+  $('#trailer-wrapper').html('');
 }
 
 function showKickstarter () {
@@ -29,33 +29,44 @@ function hideKickstarter () {
 
 $(function () {
 
-  // Handle navigation on large screens.
-  $('nav a').click(function () {
-    if (small()) {
-      return;
+  var navigate = function (target) {
+    if (!$('#' + target).length) {
+      target = 'home';
     }
+
+    // $('body').removeClass().addClass(target);
 
     // Hide all content divs.
     $('.content').removeClass('active');
 
     // Show the targeted div.
-    $('#' + $(this).data('target')).addClass('active');
+    $('#' + target).addClass('active');
 
     // Toggle the trailer on/off. This is because simply hiding it
     // does weird things in Chrome :(
-    if ($(this).data('target') === 'trailer') {
+    if (target === 'trailer') {
       showTrailer();
     }
     else {
       hideTrailer();
     }
 
-    if ($(this).data('target') === 'donate') {
+    if (target === 'donate') {
       showKickstarter();
     }
     else {
       hideKickstarter();
     }
+  };
+
+  // Handle navigation on large screens.
+  $('nav a').click(function (e) {
+    if (small()) {
+      return;
+    }
+
+    e.preventDefault();
+    navigate($(this).data('target'));
   });
 
   $(window).resize(_.throttle(function () {
@@ -72,6 +83,10 @@ $(function () {
   if (small()) {
     showTrailer();
     showKickstarter();
+  }
+  else {
+    var hash = window.location.hash ? window.location.hash.slice(1) : 'home';
+    navigate(hash);
   }
 
 });

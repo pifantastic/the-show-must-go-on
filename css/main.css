@@ -31,7 +31,7 @@ img.bg {
 
 .page-wrapper {
   position: relative;
-  width: 600px;
+  width: 680px;
   margin: 0 auto;
 }
 
@@ -44,6 +44,11 @@ div.content {
   font-size: 19px;
   line-height: 29.75px;
   border-radius: 2px;
+}
+
+div#home.content {
+  height: 200px;
+  background-color: transparent;
 }
 
 div.content.active {
@@ -71,7 +76,7 @@ nav {
       display: block;
       float: left;
       text-align: center;
-      margin: 0 10px;
+      margin: 0 6px;
       background-color: transparent;
       border-radius: 3px;
       cursor: pointer;
@@ -96,6 +101,16 @@ nav {
     .nav-donate:hover { background-image: url(/img/donate-hover.png); }
     .nav-about { background-image: url(/img/about.png); }
     .nav-about:hover { background-image: url(/img/about-hover.png); }
+    .nav-blog { background-image: url(/img/blog.png); }
+    .nav-blog:hover { background-image: url(/img/blog-hover.png); }
+    .nav-support { background-image: url(/img/support.png); }
+    .nav-support:hover { background-image: url(/img/support-hover.png); }
+    .nav-thanks { background-image: url(/img/thanks.png); }
+    .nav-thanks:hover { background-image: url(/img/thanks-hover.png); }
+    .nav-store { background-image: url(/img/store.png); }
+    .nav-store:hover { background-image: url(/img/store-hover.png); }
+    .nav-kickstarter { background-image: url(/img/kickstarter.png); }
+    .nav-kickstarter:hover { background-image: url(/img/kickstarter-hover.png); }
 
 @media screen and (max-width: 600px) {
   .page-wrapper {
@@ -112,15 +127,85 @@ nav {
     width: 100%;
     padding: 5px 0;
     margin: 5px 0;
+    background-color: white;
   }
+
+    nav li a {
+      display: block;
+      background: none !important;
+      color: black;
+      text-indent: 0;
+      text-align: center;
+      width: 100%;
+      line-height: 38px;
+    }
 
   div.content {
     display: block;
     margin-bottom: 25px;
+  }
+
+  #home {
+    display: none;
   }
 }
 
 /* Needed for Firefox */
 .wufoo-form-container {
   height: 447px;
+}
+
+#social {
+  margin: 20px;
+  text-align: center;
+}
+
+#social .twitter {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+#thanks h2, #thanks h4, #thanks h5, #thanks h6 {
+  text-align: center;
+}
+
+#thanks h4 {
+  font-size: 16px;
+}
+
+#thanks h5 {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+#thanks ul.producers {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#thanks ul.producers li {
+  display: inline-block;
+  padding-right: 25px;
+  font-size: 14px;
+}
+
+#thanks ul.others {
+  list-style: none;
+  padding: 0;
+  width: 32%;
+  display: inline-block;
+  margin-top: 0;
+}
+
+#thanks ul.others li {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.coming-soon {
+  font-size: 34px;
+  text-align: center;
+  padding: 100px 0 100px 0;
 }

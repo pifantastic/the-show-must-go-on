@@ -19,9 +19,14 @@
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1402065310044187";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <img src="img/background.png" class="bg" alt="">
 
@@ -32,11 +37,14 @@
           <li><a class="nav-trailer" data-target="trailer" href="#trailer">Trailer</a></li>
           <li><a class="nav-about" data-target="about" href="#about">About</a></li>
           <li><a class="nav-contact" data-target="contact" href="#contact">Contact</a></li>
-          <li><a class="nav-donate" data-target="donate" href="#donate">Donate</a></li>
+          <li><a class="nav-support" data-target="support" href="#support">Support</a></li>
+          <li><a class="nav-blog" data-target="blog" href="#blog">Blog</a></li>
         </ul>
       </nav>
 
       <div id="main">
+
+        <div class="content" id="home"></div>
 
         <div class="content" id="about">
           <h3>What is One Act Play?</h3>
@@ -72,8 +80,180 @@
           </script>
         </div>
 
-        <div class="content" id="donate"></div>
-        <div class="content" id="trailer"></div>
+        <!-- <div class="content" id="donate"></div> -->
+        <div class="content" id="support">
+          <h3>Support</h3>
+        <!--   This link navigates to a new page with four links on it. These include links to our fiscal sponsor for donations, our online marketplace (coming soon?), and the kickstarter. A link to the special thanks page for the kickstarter would be added to the bottom of this page.
+Add a BLOG tab. This redirects to the blog which you recommended be a separate site from the website, correct? -->
+          <ul>
+            <li>
+              <a href="https://www.kickstarter.com/projects/1810006957/the-show-must-go-on-6">Kickstarter</a>
+            </li>
+            <li>
+              <a href="https://www.austinfilm.org/film-the-show-must-go-on">Fiscal Sponsor</a>
+            </li>
+        </div>
+
+        <div class="content" id="trailer">
+          <h3>Trailer</h3>
+          <div id="trailer-wrapper"></div>
+        </div>
+
+        <div class="content" id="blog">
+          <h3>Blog</h3>
+          <div class="coming-soon">
+            Coming Soon
+          </div>
+        </div>
+
+        <div class="content" id="thanks">
+          <h2>Standing Ovation</h2>
+          <h4>Our kickstarter contributors deserve a round of applause, three bows, and flowers.</h4>
+          <h5>Associate Producers</h5>
+          <ul class="producers">
+            <li>Chris and Tracy Moore</li>
+            <li>G. Kip Brumble</li>
+            <li>Dixie Darling</li>
+            <li>Phillip Taylor</li>
+            <li>Ricky Ramon &amp; Andrew Harper</li>
+            <li>Maggie Bettner</li>
+            <li>Cheryl Jones</li>
+            <li>Karen Mercantel</li>
+            <li>Ginger Ales Hutter</li>
+          </ul>
+          <h6>The generosity of these patrons made our film possible.</h6>
+          <h5>Special Thanks</h5>
+          <ul class="others">
+            <li>Aaron Forsander</li>
+            <li>Alex Davis &mdash; Lawrence</li>
+            <li>Alison Frost, TAMUCC</li>
+            <li>Amanda Woods</li>
+            <li>Amy Arlitt</li>
+            <li>Amy Medina</li>
+            <li>Andrew R. Brack</li>
+            <li>Andrew Roman</li>
+            <li>Anna Howard</li>
+            <li>Ashley M. Sherwood</li>
+            <li>Aubrey Fitzhenry</li>
+            <li>B.A. &amp; Donna Lawless</li>
+            <li>Becky Ralston</li>
+            <li>Ben Powell</li>
+            <li>Brenda &amp; Rob Keith</li>
+            <li>Brian &amp; Joan Vanicek</li>
+            <li>Bryan Vallery</li>
+            <li>Casey &amp; Cynthia Jones</li>
+            <li>Cathy Huvar</li>
+            <li>Cheryl Painter</li>
+            <li>Christina Stone</li>
+            <li>Chris "Papi" Mekhail</li>
+            <li>Clinton &amp; Cheramie Hooper</li>
+            <li>Cypress Woods Theatre Company</li>
+            <li>Daniel Gambill</li>
+            <li>Daniel D. Wallace</li>
+            <li>David E. Clarke</li>
+            <li>Debbie Cline</li>
+            <li>Debbie Duffee</li>
+            <li>Diane Kaste</li>
+            <li>Emily Swart &amp; NDHS Theatre</li>
+            <li>Funmi Ogunro</li>
+            <li>G.K. &amp; Carolyn Brumble</li>
+            <li>Gina Martin</li>
+            <li>Grabie Grimaldo</li>
+            <li>H. Victoria Anderson</li>
+            <li>Hector Bojorquez</li>
+          </ul>
+          <ul class="others">
+            <li>Inlaw Properties</li>
+            <li>Irene Dennison Herr</li>
+            <li>Jace Barton</li>
+            <li>Jackie deMontmollin</li>
+            <li>Jamie Navarre</li>
+            <li>Jane Summerlin</li>
+            <li>Jeanne Gilson</li>
+            <li>Jeff McAdams</li>
+            <li>Jeff Nitzberg</li>
+            <li>Jennifer Schroeder Weber</li>
+            <li>Jenny Hoffman</li>
+            <li>Jill Gable</li>
+            <li>Jim &amp; Betty McGilvry</li>
+            <li>Joey &amp; Melissa Venable</li>
+            <li>John &amp; Brittany Burgess</li>
+            <li>Jonathan Pascoe</li>
+            <li>Joshua Harriman</li>
+            <li>Julio Morales</li>
+            <li>Justin Ehrlich</li>
+            <li>Kaela Jochec</li>
+            <li>Kaitlyn Reed</li>
+            <li>Karen Dikes</li>
+            <li>Karen Frederick</li>
+            <li>Kathy Bailey Partin</li>
+            <li>Katie Cameron</li>
+            <li>Katie Elise Ormsbee</li>
+            <li>Kayce Walters</li>
+            <li>Keepers Productions</li>
+            <li>Kimberly Hudson</li>
+            <li>Laura Cheek</li>
+            <li>Laurie Durrett</li>
+            <li>Laurie Herzer</li>
+            <li>Lesha Woodard</li>
+            <li>Linda Nicks</li>
+            <li>Lindsey Blisard</li>
+            <li>Lucia Kasulis</li>
+            <li>Madeline Chauvin</li>
+            <li>Mandy Fortenberry</li>
+            <li>Marcelena Mayhorn</li>
+          </ul>
+          <ul class="others">
+            <li>Mario J. Pena</li>
+            <li>Mark Pickell</li>
+            <li>Mary Hille</li>
+            <li>Matthew Don Wasson</li>
+            <li>Melissa Raines</li>
+            <li>Michelle Howard-Schwind, Ph.D.</li>
+            <li>Morgan Darrell Sims</li>
+            <li>Mr. &amp; Mrs. Larry Gideon</li>
+            <li>Mr. Kim Martin</li>
+            <li>Nola Parker</li>
+            <li>Paula Gonzales</li>
+            <li>Pete Cardella</li>
+            <li>Peter Frey</li>
+            <li>R. Scott Allen</li>
+            <li>Rayna Harris</li>
+            <li>Reed Chappell</li>
+            <li>Richard &amp; Elisa Trojan</li>
+            <li>Robert Salm</li>
+            <li>Roberta Lakavage</li>
+            <li>Robyn Skrhak</li>
+            <li>Rodney &amp; Shelly Ebeling</li>
+            <li>Sands Drama</li>
+            <li>Sara Keith</li>
+            <li>Sarah E. Gonzalez</li>
+            <li>Scott E. Sanders</li>
+            <li>Stacy &amp; Ana Lehnert</li>
+            <li>Stephen Belyeu</li>
+            <li>Steve Carpentier</li>
+            <li>Steven Goff</li>
+            <li>Susannah Raulino</li>
+            <li>Suzanne Link</li>
+            <li>Tabatha Wright</li>
+            <li>Tim Tsai</li>
+            <li>Tim Unroe</li>
+            <li>Tom Hutchinson</li>
+            <li>Travis Poe</li>
+            <li>Tyler Price</li>
+            <li>Zach &amp; Annaliza Gideon</li>
+          </ul>
+        </div>
+
+        <div id="social" style="clear: both">
+          <div class="twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://oneactplaymovie.com/">
+              Tweet
+            </a>
+          </div>
+
+          <div class="fb-like" data-href="http://oneactplaymovie.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
 
       </div>
 
@@ -82,6 +262,10 @@
     <script src="js/vendor/jquery-1.9.1.min.js"></script>
     <script src="js/vendor/underscore-min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
 
     <script>
       // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
